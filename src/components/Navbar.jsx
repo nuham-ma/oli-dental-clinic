@@ -49,9 +49,13 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
           {/* Location & Hours */}
           <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
             <span className="flex items-center gap-1.5 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-skybrand-400" />
-              <span>{lang === 'am' ? 'ከሰኞ - እሑድ: 09:00 - 18:30 (በየቀኑ)' : 'Mon - Sun: 09:00 - 18:30 (Daily)'}</span>
-            </span>
+  <Clock className="w-3.5 h-3.5 text-skybrand-400" />
+  <span>
+    {lang === 'am'
+      ? 'ከሰኞ - እሑድ: 03:00 - 12:30'
+      : 'Mon - Sun: 03:00 - 12:30 local time'}
+  </span>
+</span>
             <span className="hidden sm:inline-block text-slate-600">•</span>
             <span className="hidden sm:flex items-center gap-1.5 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-skybrand-400" />

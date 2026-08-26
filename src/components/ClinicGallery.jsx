@@ -7,18 +7,18 @@ export default function ClinicGallery({ lang = 'am' }) {
     {
       image: "/images/reception.jpg",
       caption: {
-        am: "የኦሊ የጥርስ ሕክምና ክሊኒክ ዋና መስተንግዶና አርማ",
-        en: "Oli Dental Clinic Reception & Brand Sign"
+        am: "የኦሊ የጥርስ ሕክምና ክሊኒክ ዋና መስተንግዶ",
+        en: "Oli Dental Clinic Reception "
       },
       tag: { am: "መስተንግዶ", en: "Reception" }
     },
     {
       image: "/images/interior1.jpg",
       caption: {
-        am: "ዘመናዊ የጥርስ ሕክምና ወንበር እና መሳሪያዎች",
-        en: "Modern Operatory & Dental Treatment Chair"
+        am: "ዘመናዊ ማረፊያ ክፍል ",
+        en: "Modern Waiting Area "
       },
-      tag: { am: "የህክምና ክፍል", en: "Treatment Room" }
+      tag: { am: "እንግዳ ማረፊያ ቦታ ", en: "Waiting Area" }
     },
     {
       image: "/images/doctor.jpg",
@@ -50,7 +50,7 @@ export default function ClinicGallery({ lang = 'am' }) {
         am: "ደረጃቸውን የጠበቁ ንጹህ የጥርስ ሕክምና መሳሪያዎች",
         en: "Sterilized Medical Dental Instruments"
       },
-      tag: { am: "ማምከን", en: "Sterilization" }
+      tag: { am: "ስትራላይዜሽን", en: "Sterilization" }
     }
   ];
 
@@ -59,7 +59,7 @@ export default function ClinicGallery({ lang = 'am' }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-14 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-skybrand-100 text-skybrand-700 text-xs font-bold uppercase tracking-wider mb-3">
             <Camera className="w-3.5 h-3.5" />
             <span>{lang === 'am' ? 'የክሊኒካችን ፎቶዎች' : 'Authentic Clinic Photos'}</span>
@@ -81,13 +81,13 @@ export default function ClinicGallery({ lang = 'am' }) {
           {galleryItems.map((item, idx) => (
             <div 
               key={idx}
-              className="bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-soft-lg border border-slate-200/80 group transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-soft-lg border border-slate-200/80 group transition-all duration-300 flex flex-col justify-between animate-fade-in-up hover-left"
             >
               <div className="relative h-64 overflow-hidden bg-slate-100">
                 <img 
                   src={item.image} 
                   alt={item.caption[lang]} 
-           className="w-full h-full object-contain object-center"
+            className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
                 

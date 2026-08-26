@@ -18,7 +18,7 @@ export default function AboutSection({ lang = 'am', onOpenBooking }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Photo 2 — Dental Treatment Room / Modern Dental Chair */}
-         [8/26/2026 4:02 PM] Nunal: import teethcleaning from "../assets/teethcleaning.jpg";
+         
         <div className="lg:col-span-6 relative animate-fade-in">
             <div className="relative">
               
@@ -42,10 +42,10 @@ export default function AboutSection({ lang = 'am', onOpenBooking }) {
                     </div>
                     <div>
                       <h4 className="font-extrabold text-slate-900 text-xs sm:text-sm">
-                        {lang === 'am' ? 'ዘመናዊ የጥርስ ሕክምና ወንበር እና ክፍል' : 'Modern Operatory & Equipment'}
+                        {lang === 'am' ? 'ዘመናዊ ማረፊያ ክፍል ' : 'Modern Waiting Area'}
                       </h4>
                       <p className="text-[11px] text-slate-500">
-                        {lang === 'am' ? 'ንጹህ እና ደረጃውን የጠበቀ የህክምና ክፍል' : 'Strictly sanitized & comfortable treatment room'}
+                        {lang === 'am' ? 'ንጹህ እና ደረጃውን የጠበቀ ማረፊያ ክፍል' : 'Strictly sanitized & comfortable waiting room'}
                       </p>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ export default function AboutSection({ lang = 'am', onOpenBooking }) {
                   <span>{lang === 'am' ? 'ዘመናዊ የህክምና መሳሪያዎች' : 'Modern Equipment'}</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-500">
-                  {lang === 'am' ? 'ደረጃቸውን የጠበቁ ዘመናዊ ወንበሮችና ቁሳቁሶች' : 'Equipped with comfortable modern dental units'}
+                  {lang === 'am' ? 'ደረጃቸውን የጠበቁ ዘመናዊ የህክምና መሳሪያዎች' : 'Equipped with comfortable modern dental instrument'}
                 </p>
               </div>
 
@@ -105,24 +105,24 @@ export default function AboutSection({ lang = 'am', onOpenBooking }) {
                   <span>{lang === 'am' ? 'ከፍተኛ የንጽህና ጥበቃ' : 'Strict Hygiene'}</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-500">
-                  {lang === 'am' ? 'የታመቁ እና ንጹህ የህክምና መሳሪያዎች' : 'Thorough sterilization of all instruments'}
+                  {lang === 'am' ? ' ንጹህ የህክምና መሳሪያዎች' : 'Thorough sterilization of all instruments'}
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover-lift">
                 <div className="flex items-center gap-2 text-slate-900 font-bold text-xs sm:text-sm mb-1">
                   <Clock className="w-4 h-4 text-amber-500" />
-                  <span>{lang === 'am' ? 'በየቀኑ ክፍት (ከሰኞ - እሑድ)' : 'Open 7 Days a Week'}</span>
+                  <span>{lang === 'am' ? 'ከሰኞ - እሑድ' : 'Open 7 Days a Week'}</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-500">
-                  {lang === 'am' ? 'ከጠዋቱ 09:00 እስከ ማታ 18:30 ድረስ' : '09:00 – 18:30 daily schedule'}
+                  {lang === 'am' ? 'ከጠዋቱ 03:00 እስከ ማታ 12:30 ድረስ' : '03:00 – 12:30 local time'}
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover-lift">
                 <div className="flex items-center gap-2 text-slate-900 font-bold text-xs sm:text-sm mb-1">
                   <MapPin className="w-4 h-4 text-red-500" />
-                  <span>{lang === 'am' ? 'ተደራሽ አድራሻ' : 'Prime Location'}</span>
+                  <span>{lang === 'am' ? 'አድራሻ' : 'Prime Location'}</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-500">
                   {lang === 'am' ? 'መገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ' : 'Grace City Mall 3rd floor, Megenagna'}

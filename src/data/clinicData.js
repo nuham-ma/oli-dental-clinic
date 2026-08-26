@@ -51,12 +51,12 @@ export const clinicInfo = {
   },
   hours: {
     display: {
-      am: "ከሰኞ – እሑድ፡ 09:00 – 18:30 (በየቀኑ)",
-      en: "Monday – Sunday: 09:00 – 18:30 (Daily)"
+      am: "ከሰኞ – እሑድ፡ 03:00 – 12:30 ",
+      en: "Monday – Sunday: 03:00 – 12:30 local time"
     },
     detailed: {
-      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 09:00 እስከ ምሽቱ 18:30 በየቀኑ ክፍት ነው",
-      en: "Open Monday through Sunday from 09:00 to 18:30 daily"
+      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 03:00 እስከ 12:30 ",
+      en: "Open Monday through Sunday from 03:00 to 12:30 local time"
     }
   },
   phones: [
@@ -110,7 +110,7 @@ export const verifiedServices = [
     features: {
       am: [
         "ለተስተካከለ እና ማራኪ ፈገግታ",
-        "የጥርስ ንክሻ እና አቀማመጥን የሚያስተካክል",
+        "የጥርስ አቀማመጥን የሚያስተካክል",
         "ለህፃናት እና ለአዋቂዎች ተስማሚ"
       ],
       en: [
@@ -206,7 +206,7 @@ export const verifiedServices = [
     features: {
       am: [
         "ጥልቅ የጥርስ እና የአፍ ምርመራ",
-        "ደረጃቸውን የጠበቁ ንጹህ የህክምና መሳሪያዎች",
+        "ንፁህ የህክምና መሳሪያዎች",
         "ለቤተሰብ አባላት ሁሉ የተሟላ የህክምና እንክብካቤ"
       ],
       en: [
@@ -225,26 +225,26 @@ export const clinicHighlights = [
       en: "Modern Equipment & Technology"
     },
     description: {
-      am: "ክሊኒካችን በዘመናዊ የጥርስ ህክምና ወንበሮች እና የህክምና መሳሪያዎች የተሟላ ነው።",
-      en: "Our clinic is equipped with advanced dental treatment chairs and precision instrumentation."
+      am: "በዘመናዊ የጥርስ ህክምና መሳሪያዎች የተሟላ ነው።",
+      en: "Our clinic is equipped with precision instrumentation."
     },
     icon: "Sparkles"
   },
   {
     title: {
-      am: "ከፍተኛ የንጽህና እና የማምከን ደረጃ",
+      am: "ከፍተኛ የንፅህና እና ስትራላይዜሽን ደረጃ",
       en: "Strict Hygiene & Sterilization"
     },
     description: {
-      am: "እያንዳንዱ የህክምና መሳሪያ በከፍተኛ ጥንቃቄ ተመርምሮ እና ታምቆ አገልግሎት ላይ ይውላል።",
+      am: "እያንዳንዱ የህክምና መሳሪያ በከፍተኛ ጥንቃቄ ተመርምሮ አገልግሎት ላይ ይውላል።",
       en: "Every instrument undergoes strict sterilization protocols to ensure patient safety and hygiene."
     },
     icon: "ShieldCheck"
   },
   {
     title: {
-      am: "ተመራጭ እና ምቹ አድራሻ",
-      en: "Prime & Accessible Location"
+      am: "አድራሻ",
+      en: "Location"
     },
     description: {
       am: "በመገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ ላይ በቀላሉ የሚገኝ እና ምቹ የመኪና ማቆሚያ ያለው።",
@@ -254,11 +254,11 @@ export const clinicHighlights = [
   },
   {
     title: {
-      am: "በየቀኑ ክፍት (ከሰኞ – እሑድ)",
+      am: "ከሰኞ – እሑድ",
       en: "Open 7 Days a Week"
     },
     description: {
-      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 09:00 እስከ ማታ 18:30 ድረስ አገልግሎት እንሰጣለን።",
+      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 03:00 እስከ ማታ 12:30 ድረስ አገልግሎት እንሰጣለን።",
       en: "We are open Monday through Sunday from 09:00 to 18:30 to fit your schedule."
     },
     icon: "Clock"

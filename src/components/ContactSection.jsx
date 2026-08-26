@@ -107,7 +107,7 @@ export default function ContactSection({ lang = 'am', onOpenBooking }) {
                 {clinicInfo.hours[lang]}
               </h4>
               <p className="text-xs text-slate-500 mt-1">
-                {lang === 'am' ? 'ከሰኞ እስከ እሑድ ከጠዋቱ 09:00 - 18:30' : 'Open every day from 09:00 to 18:30'}
+                {lang === 'am' ? 'ከሰኞ እስከ እሑድ ከጠዋቱ 03:00 - 12:30' : 'Open every day from 03:00 to 12:30 local time'}
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-slate-200">

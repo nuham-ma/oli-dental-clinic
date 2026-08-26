@@ -210,8 +210,8 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
                     onChange={handleChange}
                     className="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs sm:text-sm focus:ring-2 focus:ring-skybrand-500 outline-none"
                   >
-                    <option value="morning">{lang === 'am' ? 'ጠዋት (09:00 - 13:00)' : 'Morning (09:00 - 13:00)'}</option>
-                    <option value="afternoon">{lang === 'am' ? 'ከሰዓት (13:00 - 18:30)' : 'Afternoon (13:00 - 18:30)'}</option>
+                    <option value="morning">{lang === 'am' ? 'ጠዋት (03:00 - 6:00)' : 'Morning (03:00 - 6:00 local time)'}</option>
+                    <option value="afternoon">{lang === 'am' ? 'ከሰዓት (13:00 - 18:30)' : 'Afternoon (8:00 - 12:00)'}</option>
                   </select>
                 </div>
               </div>

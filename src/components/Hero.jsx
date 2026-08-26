@@ -44,7 +44,7 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
                 <>
                   ኦሊ የጥርስ ሕክምና ክሊኒክ <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600">
-                    ዘመናዊ የጥርስ ሕክምና፣ ጥንታዊ እሴቶች
+                    ዘመናዊ የጥርስ ሕክምና፣ ታማኝ አገልግሎት
                   </span>
                 </>
               ) : (
@@ -138,7 +138,7 @@ className="w-full h-full object-cover object-center group-hover:scale-105 transi
                     </div>
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                      09:00 - 18:30
+                      03:00 - 12:30
                     </span>
                   </div>
                 </div>
