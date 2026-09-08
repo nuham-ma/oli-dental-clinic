@@ -5,8 +5,6 @@ import {
   User, 
   Phone, 
   CheckCircle2, 
-  Clock, 
-  Sparkles, 
   AlertCircle 
 } from 'lucide-react';
 import { verifiedServices, clinicInfo } from '../data/clinicData';
@@ -53,30 +51,30 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-fade-in">
       <div 
-        className="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-100 my-8"
+        className="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-100 my-8 animate-fade-in-up"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Header */}
+        {/* Modal Header */}
         <div className="bg-gradient-to-r from-skybrand-600 via-skybrand-700 to-dental-700 p-6 text-white relative">
           <button
             onClick={handleResetAndClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors focus:outline-none"
-            aria-label="Close"
+            aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
           <div className="flex items-center gap-2 text-skybrand-200 text-xs font-bold uppercase tracking-wider mb-1">
             <Calendar className="w-4 h-4" />
-            <span>{lang === 'am' ? 'የቀጠሮ ማመልከቻ' : 'Appointment Booking'}</span>
+            <span>{lang === 'am' ? 'የቀጠሮ ማመልከቻ' : 'Appointment Request'}</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-            {lang === 'am' ? 'በኦሊ የጥርስ ሕክምና ክሊኒክ ቀጠሮ ይያዙ' : 'Schedule a Visit at Oli Dental'}
+            {lang === 'am' ? 'በኦሊ የጥርስ ሕክምና ክሊኒክ ቀጠሮ ያስይዙ' : 'Schedule a Visit at Oli Dental'}
           </h3>
           <p className="text-skybrand-100 text-xs mt-1">
-            {clinicInfo.slogan[lang]} • Megenagna, Grace City Mall 3rd Floor
+            {clinicInfo.slogan[lang]} • {clinicInfo.location.short[lang]}
           </p>
         </div>
 
@@ -84,26 +82,26 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
         <div className="p-6 max-h-[75vh] overflow-y-auto">
           {isSubmitted ? (
             /* Confirmation Screen */
-            <div className="text-center py-6 animate-in zoom-in-95">
+            <div className="text-center py-6 animate-fade-in">
               <div className="w-16 h-16 rounded-full bg-dental-100 text-dental-600 mx-auto flex items-center justify-center mb-4">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
 
               <h4 className="text-xl font-extrabold text-slate-900 mb-2">
-                {lang === 'am' ? 'የቀጠሮ ማመልከቻዎ ደርሶናል!' : 'Appointment Request Received!'}
+                {lang === 'am' ? 'የቀጠሮ ማመልከቻዎ ደርሶናል' : 'Appointment Request Received!'}
               </h4>
               <p className="text-slate-600 text-xs sm:text-sm mb-6 max-w-sm mx-auto">
                 {lang === 'am' ? (
                   <>እናመሰግናለን <strong>{formData.fullName}</strong>። የክሊኒካችን ቡድን በስልክ ቁጥር <strong>{formData.phone}</strong> ደውሎ ቀጠሮዎን ያረጋግጣል።</>
                 ) : (
-                  <>Thank you, <strong>{formData.fullName}</strong>. Our clinic team will call you at <strong>{formData.phone}</strong> shortly to confirm your visit.</>
+                  <>Thank you, <strong>{formData.fullName}</strong>. Our clinic team will call you at <strong>{formData.phone}</strong> to confirm your appointment time.</>
                 )}
               </p>
 
               {/* Direct call options */}
               <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs space-y-2 mb-6">
                 <span className="font-bold text-slate-700 block">
-                  {lang === 'am' ? 'አስቸኳይ ጥያቄ ካለዎት በቀጥታ ይደውሉ:' : 'For urgent requests, call us directly:'}
+                  {lang === 'am' ? 'አስቸኳይ ጥያቄ ካለዎት በቀጥታ ይደውሉ:' : 'For direct assistance, call us at:'}
                 </span>
                 <div className="flex flex-col sm:flex-row justify-center gap-2">
                   <a href={clinicInfo.phones[0].tel} className="font-bold text-skybrand-600 hover:underline">
@@ -118,7 +116,7 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
 
               <button
                 onClick={handleResetAndClose}
-                className="px-8 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition"
+                className="px-8 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition shadow-sm"
               >
                 {lang === 'am' ? 'እሺ፣ ተጠናቋል' : 'Done'}
               </button>
@@ -143,7 +141,7 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
                     type="text"
                     name="fullName"
                     required
-                    placeholder={lang === 'am' ? 'ስምዎን ያስገቡ' : 'Your name'}
+                    placeholder={lang === 'am' ? 'ስምዎን ያስገቡ' : 'Your full name'}
                     value={formData.fullName}
                     onChange={handleChange}
                     className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:ring-2 focus:ring-skybrand-500 outline-none"
@@ -202,7 +200,7 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    {lang === 'am' ? 'የስራ ሰዓት መስኮት' : 'Preferred Time'}
+                    {lang === 'am' ? 'የስራ ሰዓት ምርጫ' : 'Preferred Time'}
                   </label>
                   <select
                     name="timePreference"
@@ -210,20 +208,20 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
                     onChange={handleChange}
                     className="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs sm:text-sm focus:ring-2 focus:ring-skybrand-500 outline-none"
                   >
-                    <option value="morning">{lang === 'am' ? 'ጠዋት (03:00 - 6:00)' : 'Morning (03:00 - 6:00 local time)'}</option>
-                    <option value="afternoon">{lang === 'am' ? 'ከሰዓት (13:00 - 18:30)' : 'Afternoon (8:00 - 12:00)'}</option>
+                    <option value="morning">{lang === 'am' ? 'ጠዋት (09:00 - 13:00)' : 'Morning (09:00 AM - 01:00 PM)'}</option>
+                    <option value="afternoon">{lang === 'am' ? 'ከሰዓት (13:00 - 18:30)' : 'Afternoon (01:00 PM - 06:30 PM)'}</option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  {lang === 'am' ? 'ተጨማሪ ማስታወሻ (አስፈላጊ ከሆነ)' : 'Notes / Symptoms (Optional)'}
+                  {lang === 'am' ? 'ተጨማሪ ማስታወሻ (አስፈላጊ ከሆነ)' : 'Notes / Concerns (Optional)'}
                 </label>
                 <textarea
                   name="notes"
                   rows="2"
-                  placeholder={lang === 'am' ? 'ማንኛውም ተጨማሪ መረጃ ካለዎት እዚህ ይጥቀሱ...' : 'Brief notes...'}
+                  placeholder={lang === 'am' ? 'ተጨማሪ መረጃ ካለዎት እዚህ ይጥቀሱ...' : 'Brief notes or questions...'}
                   value={formData.notes}
                   onChange={handleChange}
                   className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:ring-2 focus:ring-skybrand-500 outline-none"

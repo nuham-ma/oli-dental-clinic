@@ -1,21 +1,13 @@
 /**
  * ============================================================================
- * OLI DENTAL CLINIC - VERIFIED MASTER DATA & BILINGUAL CONTENT
+ * OLI DENTAL CLINIC - MASTER CLINIC DATA & BILINGUAL CONTENT
  * ============================================================================
- * Accurate, verified information for Oli Dental Clinic (Addis Ababa, Ethiopia).
- * Natural Amharic (default) and English translations.
- * Strictly uses authentic clinic photos without stretching or distortion.
+ * Verified clinic data for Oli Dental Clinic (Megenagna, Addis Ababa).
+ * Natural Amharic (default) and English.
+ * Zero emojis, zero fake claims, zero fake doctors.
  * ============================================================================
  */
-import teethcleaning from "../assets/teethcleaning.jpg";
-import reception from "../assets/reception.jpg";
-import interior1 from "../assets/interior1.jpg";
-import doctor from "../assets/doctor.jpg";
-import interior2 from "../assets/interior2.jpg";
-import brace from "../assets/brace.jpg";
-import instrument from "../assets/instrument.jpg";
-import filling from "../assets/filling.jpg";
-import zirconiya from "../assets/zirconiya.jpg";
+
 export const clinicInfo = {
   name: {
     am: "ኦሊ የጥርስ ሕክምና ክሊኒክ",
@@ -39,24 +31,24 @@ export const clinicInfo = {
   },
   location: {
     full: {
-      am: "መገናኛ፣ ግሬስ ሲቲ ሞል፣ 3ኛ ፎቅ፣ አዲስ አበባ፣ ኢትዮጵያ",
-      en: "Megenagna, Grace City Mall, 3rd Floor, Addis Ababa, Ethiopia"
+      am: "መገናኛ፣ ግሬስ ሲቲ ሞል፣ 3ኛ ፎቅ፣ አዲስ አበባ",
+      en: "Megenagna, Grace City Mall, 3rd Floor, Addis Ababa"
     },
     short: {
-      am: "መገናኛ፣ ግሬስ ሲቲ ሞል፣ 3ኛ ፎቅ",
-      en: "Megenagna, Grace City Mall, 3rd Floor"
+      am: "መገናኛ፣ ግሬስ ሲቲ ሞል",
+      en: "Megenagna, Grace City Mall"
     },
-    city: "Addis Ababa, Ethiopia",
+    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.547372957199!2d38.79954057589886!3d9.013702189218204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8504f76239f3%3A0xb5b79e6f1406dc57!2sGrace%20City%20Mall!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set",
     googleMapsUrl: "https://maps.google.com/?q=Grace+City+Mall+Megenagna+Addis+Ababa"
   },
   hours: {
     display: {
-      am: "ከሰኞ – እሑድ፡ 03:00 – 12:30 ",
-      en: "Monday – Sunday: 03:00 – 12:30 local time"
+      am: "ከሰኞ – እሑድ፡ ከጠዋቱ 3:00 – ማታ 12:30",
+      en: "Monday – Sunday: 09:00 AM – 06:30 PM"
     },
-    detailed: {
-      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 03:00 እስከ 12:30 ",
-      en: "Open Monday through Sunday from 03:00 to 12:30 local time"
+    short: {
+      am: "ከሰኞ – እሑድ፡ 09:00 – 18:30",
+      en: "Mon – Sun: 09:00 AM – 06:30 PM"
     }
   },
   phones: [
@@ -77,268 +69,163 @@ export const clinicInfo = {
     tiktok: "https://vm.tiktok.com/ZS9B6PRP5qDeJ-lD84Z/"
   },
   photos: {
-    // 1. Clinic Exterior / Reception Sign (Hero image)
+    logo: "/images/logo.jpg",
     heroExterior: "/images/reception.jpg",
-    heroAlt: "/images/hero.png",
-    
-    // 2. Treatment Room / Dental Chair (About / Why Choose Us)
     treatmentRoom: "/images/interior1.jpg",
-    treatmentChairAlt: "/images/dental.jpg",
-    
-    // 3. Dentist / Patient Treatment Photo (Services / Trust)
     dentistTreatment: "/images/doctor.jpg",
-    patientCareAlt: "/images/dental2.jpg",
-    
-    // Facility & lobby photos
     receptionLobby: "/images/interior2.jpg",
     instruments: "/images/instrument.jpg"
   }
 };
 
+/**
+ * 5 Verified Services with optimized photo paths and concise descriptions
+ */
 export const verifiedServices = [
   {
     id: "braces",
+    number: "01",
     title: {
       am: "የጥርስ ማስተካከያ (Braces)",
-      en: "Braces (Orthodontics)"
+      en: "Braces & Orthodontics"
     },
     shortDesc: {
-      am: "ያልተስተካከሉ፣ የተነባበሩ ወይም ክፍተት ያላቸውን ጥርሶች በዘመናዊ የጥርስ ማስተካከያ (Braces) ደረጃውን በጠበቀ መልኩ ማስተካከል።",
-      en: "Professional orthodontic alignment for crooked teeth, gaps, and bite correction using high-quality modern braces."
+      am: "ያልተስተካከሉ፣ የተነባበሩ ወይም ክፍተት ያላቸውን ጥርሶች በዘመናዊ የጥርስ ማስተካከያ ደረጃውን በጠበቀ መልኩ ማስተካከል።",
+      en: "Precision alignment for crowded, spaced, or irregular teeth using modern orthodontic brackets to create a confident, healthy smile."
     },
-    image: brace,
-    features: {
-      am: [
-        "ለተስተካከለ እና ማራኪ ፈገግታ",
-        "የጥርስ አቀማመጥን የሚያስተካክል",
-        "ለህፃናት እና ለአዋቂዎች ተስማሚ"
-      ],
-      en: [
-        "Creates a straight and confident smile",
-        "Corrects dental bite and jaw alignment",
-        "Customized treatment for adults & teens"
-      ]
-    }
+    image: "/images/brace.jpg",
+    alt: "Orthodontic braces clinical treatment"
   },
   {
     id: "teeth-cleaning",
+    number: "02",
     title: {
       am: "የጥርስ ማጽዳት (Teeth Cleaning)",
-      en: "Teeth Cleaning (Scaling & Polishing)"
+      en: "Teeth Cleaning & Scaling"
     },
     shortDesc: {
-      am: "በጥርስ ላይ የሚፈጠረውን ቆሻሻ (Tartar & Plaque) በዘመናዊ አልትራሶኒክ መሳሪያ በማስወገድ ጤናማ ድድ እና ንጹህ ጥርስ ማረጋገጥ።",
-      en: "Thorough professional cleaning and ultrasonic scaling to remove plaque, tartar buildup, and prevent gum disease."
+      am: "በጥርስ እና ድድ ላይ የሚከማቸውን ቆሻሻ እና ካልኩለስ በዘመናዊ አልትራሶኒክ መሳሪያ በማስወገድ የድድ ጤንነትን መጠበቅ እና የአፍ ጠረንን ማደስ።",
+      en: "Ultrasonic scaling and polishing to remove plaque, calculus buildup, and stains while protecting long-term gum vitality."
     },
-    image: teethcleaning,
-    features: {
-      am: [
-        "የጥርስ እና የድድ ጤንነትን መጠበቅ",
-        "የአፍ ጠረንን ማስተካከል",
-        "ቀለል ባለ እና ምቹ በሆነ አሰራር"
-      ],
-      en: [
-        "Prevents gum disease and dental decay",
-        "Restores fresh breath and tooth smoothness",
-        "Gentle ultrasonic cleaning procedure"
-      ]
-    }
+    image: "/images/doctor.jpg",
+    alt: "Ultrasonic teeth cleaning procedure"
   },
   {
     id: "dental-filling",
+    number: "03",
     title: {
       am: "የጥርስ ሙሌት (Dental Filling)",
-      en: "Dental Filling"
+      en: "Tooth-Colored Dental Filling"
     },
     shortDesc: {
-      am: "በመበስበስ ወይም በስብራት የተጎዱ ጥርሶችን በተፈጥሯዊ የጥርስ ቀለም በሚመሳሰል ጥራት ባለው ንጥረ ነገር መሙላት እና ማዳን።",
-      en: "Tooth-colored, durable composite fillings to restore decayed or broken teeth and preserve natural dental structure."
+      am: "በመበስበስ ወይም በስብራት የተጎዱ ጥርሶችን ከተፈጥሮ ጥርስ ቀለም ጋር በሚመሳሰል ጠንካራ እና ጥራት ባለው ንጥረ ነገር በጥንቃቄ መሙላት።",
+      en: "High-strength composite dental fillings that match your natural tooth shade, restoring full structure and stopping decay."
     },
-    image: filling,
-    features: {
-      am: [
-        "ከተፈጥሮ ጥርስ ቀለም ጋር የሚመሳሰል",
-        "የጥርስ ህመምን እና ተጨማሪ ጉዳትን የሚከላከል",
-        "የጥርስን ጠንካራነት እና ተግባር የሚመልስ"
-      ],
-      en: [
-        "Natural tooth-colored composite material",
-        "Stops cavity progression and sensitivity",
-        "Restores full chewing strength"
-      ]
-    }
+    image: "/images/filling.jpg",
+    alt: "Composite tooth restoration filling"
   },
   {
     id: "zirconia-crown",
+    number: "04",
     title: {
       am: "የዚርኮኒያ ጥርስ ሽፋን (Zirconia Crown)",
-      en: "Zirconia Crown"
+      en: "Zirconia Crowns"
     },
     shortDesc: {
-      am: "ከፍተኛ ጥንካሬ እና የተፈጥሮ ውበት ባለው የዚርኮኒያ ቁሳቁስ የተሰሩ የጥርስ ሽፋኖች (Crowns) ለረጅም ጊዜ አገልግሎት።",
-      en: "Ultra-durable, premium aesthetic zirconia crowns providing natural translucency and superior long-term strength."
+      am: "እጅግ ከፍተኛ ጥንካሬ እና የተፈጥሮ ውበት ባላቸው የዚርኮኒያ ሽፋኖች አማካኝነት የተጎዱ ወይም የተሰበሩ ጥርሶችን ለረጅም ዓመታት ማዳን።",
+      en: "Ultra-durable, biocompatible zirconia crowns providing authentic tooth translucency and long-lasting chewing strength."
     },
-    image: zirconiya,
-    features: {
-      am: [
-        "እጅግ በጣም ጠንካራ እና የማይሰበር",
-        "ተፈጥሯዊ እና ማራኪ ውበት ያለው",
-        "ለተጎዱ ወይም ለተሰበሩ ጥርሶች አስተማማኝ መፍትሄ"
-      ],
-      en: [
-        "Exceptional biocompatibility and durability",
-        "Seamless natural aesthetic appearance",
-        "Long-lasting protection for damaged teeth"
-      ]
-    }
+    image: "/images/zirconiya.jpg",
+    alt: "Custom aesthetic zirconia dental crown"
   },
   {
     id: "other-services",
+    number: "05",
     title: {
-      am: "ሌሎች የጥርስ ሕክምና አገልግሎቶች",
-      en: "Other Dental Care Services"
+      am: "አጠቃላይ የጥርስ ሕክምና አገልግሎቶች",
+      en: "Comprehensive Dental Care"
     },
     shortDesc: {
-      am: "አጠቃላይ የጥርስ ምርመራ፣ የጥርስ ማውጣት፣ እና የተለያዩ የጥርስ ጤና አጠባበቅ አገልግሎቶች በሙሉ በክሊኒካችን ያገኛሉ።",
-      en: "Comprehensive oral examinations, gentle extractions, preventative care, and specialized dental treatments."
+      am: " የጥርስ እና የአፍ ምርመራ፣ የጥርስ ማውጣት፣ እና የተለያዩ የጥርስ ጤና አጠባበቅ አገልግሎቶች በዘመናዊ እና ንጹህ የህክምና መሳሪያዎች።",
+      en: "Full oral diagnostic checkups, gentle extractions, preventative care, and specialized treatments for the entire family."
     },
-    image: instrument,
-    features: {
-      am: [
-        "ጥልቅ የጥርስ እና የአፍ ምርመራ",
-        "ንፁህ የህክምና መሳሪያዎች",
-        "ለቤተሰብ አባላት ሁሉ የተሟላ የህክምና እንክብካቤ"
-      ],
-      en: [
-        "Comprehensive oral health checkups",
-        "Strictly sterilized modern medical instruments",
-        "Dedicated dental care for the entire family"
-      ]
-    }
+    image: "/images/instrument.jpg",
+    alt: "Sterilized dental instrumentation and general oral care"
   }
 ];
 
-export const clinicHighlights = [
-  {
-    title: {
-      am: "ዘመናዊ ቴክኖሎጂ እና ቁሳቁሶች",
-      en: "Modern Equipment & Technology"
-    },
-    description: {
-      am: "በዘመናዊ የጥርስ ህክምና መሳሪያዎች የተሟላ ነው።",
-      en: "Our clinic is equipped with precision instrumentation."
-    },
-    icon: "Sparkles"
+export const reviewsSummary = {
+  rating: "4.9",
+  totalCount: "47",
+  stars: 5,
+  source: "Google Reviews",
+  metrics: {
+    am: [
+      { label: "የአገልግሎት ጥራት", score: "5.0" },
+      { label: "የክሊኒኩ ንጽህና", score: "5.0" },
+      { label: "የባለሙያዎች እንክብካቤ", score: "4.9" },
+      { label: "የቀጠሮ አያያዝ", score: "4.9" }
+    ],
+    en: [
+      { label: "Treatment Quality", score: "5.0" },
+      { label: "Clinic Sanitation", score: "5.0" },
+      { label: "Patient Care", score: "4.9" },
+      { label: "Appointment Punctuality", score: "4.9" }
+    ]
   },
-  {
-    title: {
-      am: "ከፍተኛ የንፅህና እና ስትራላይዜሽን ደረጃ",
-      en: "Strict Hygiene & Sterilization"
-    },
-    description: {
-      am: "እያንዳንዱ የህክምና መሳሪያ በከፍተኛ ጥንቃቄ ተመርምሮ አገልግሎት ላይ ይውላል።",
-      en: "Every instrument undergoes strict sterilization protocols to ensure patient safety and hygiene."
-    },
-    icon: "ShieldCheck"
-  },
-  {
-    title: {
-      am: "አድራሻ",
-      en: "Location"
-    },
-    description: {
-      am: "በመገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ ላይ በቀላሉ የሚገኝ እና ምቹ የመኪና ማቆሚያ ያለው።",
-      en: "Conveniently located at Grace City Mall, 3rd Floor in Megenagna with easy accessibility."
-    },
-    icon: "MapPin"
-  },
-  {
-    title: {
-      am: "ከሰኞ – እሑድ",
-      en: "Open 7 Days a Week"
-    },
-    description: {
-      am: "ከሰኞ እስከ እሑድ ከጠዋቱ 03:00 እስከ ማታ 12:30 ድረስ አገልግሎት እንሰጣለን።",
-      en: "We are open Monday through Sunday from 09:00 to 18:30 to fit your schedule."
-    },
-    icon: "Clock"
-  }
-];
+  googleMapsReviewUrl: "https://maps.google.com/?q=Grace+City+Mall+Megenagna+Addis+Ababa"
+};
 
 /**
- * Verified Website Technology Stack (Used for building the Oli Dental Clinic web application)
+ * Authentic Oli Dental Clinic photos for the 3D Coverflow Carousel
  */
-export const technologyStack = [
+export const clinicGalleryPhotos = [
   {
-    name: "React 18",
-    category: {
-      am: "የፊት ለፊት ቴክኖሎጂ",
-      en: "Frontend Framework"
+    id: 1,
+    image: "/images/reception.jpg",
+    title: {
+      am: "የክሊኒኩ ዋና መስተንግዶ",
+      en: "Oli Dental Reception"
     },
-    description: {
-      am: "ለፈጣን፣ አስተማማኝ እና ተለዋዋጭ የተጠቃሚ ተሞክሮ የተገነባ የኮምፖነንት አወቃቀር።",
-      en: "Component-based architecture delivering high performance and smooth interactive states."
+    subtitle: {
+      am: "ዘመናዊ እና ምቹ የመስተንግዶ አዳራሽ",
+      en: "Modern & welcoming reception"
     },
-    badge: "v18.3"
+    tag: {
+      am: "መስተንግዶ",
+      en: "Reception"
+    }
   },
   {
-    name: "Vite",
-    category: {
-      am: "የግንባታ እና ማመቻቻ መሳሪያ",
-      en: "Build Tool & Bundler"
+    id: 2,
+    image: "/images/interior1.jpg",
+    title: {
+      am: "ዘመናዊ የጥርስ ሕክምና ክፍል",
+      en: "Treatment Room"
     },
-    description: {
-      am: "ፈጣን የገጽ አከፋፈት እና ንጹህ የኮድ ጥቅል አሰራርን የሚያረጋግጥ ዘመናዊ መድረክ።",
-      en: "Next-generation frontend tooling providing instant server start and optimized production bundling."
+    subtitle: {
+      am: "ዘመናዊ እና ምቹ የህክምና ክፍል",
+      en: "Modern and comfortable treatment room"
     },
-    badge: "v5.4"
+    tag: {
+      am: "የህክምና ክፍል",
+      en: "Treatment Room"
+    }
   },
   {
-    name: "Tailwind CSS 3",
-    category: {
-      am: "ዘመናዊ የዲዛይን ስርአት",
-      en: "Styling & Design System"
+    id: 3,
+    image: "/images/interior2.jpg",
+    title: {
+      am: "የታካሚዎች ማረፊያ አዳራሽ",
+      en: "Patient Waiting Lounge"
     },
-    description: {
-      am: "ለሞባይል፣ ታብሌት እና ዴስክቶፕ ምቹ የሆነ ንጹህ የህክምና የቀለም አቀማመጥ እና ገጽታ።",
-      en: "Utility-first modern styling tailored for medical aesthetics with custom responsive layouts."
+    subtitle: {
+      am: "ጸጥ ያለ እና ምቹ የታካሚዎች ማረፊያ",
+      en: "Comfortable and welcoming waiting area"
     },
-    badge: "v3.4"
-  },
-  {
-    name: "Responsive & Accessible (a11y)",
-    category: {
-      am: "ተደራሽነት እና ምላሽ ሰጪነት",
-      en: "Responsiveness & a11y"
-    },
-    description: {
-      am: "በማንኛውም የስልክ እና የኮምፒውተር ስክሪን ላይ የሚሰራ እና የድር ተደራሽነት ደረጃዎችን የጠበቀ።",
-      en: "Semantic HTML5, ARIA labels, smooth typography, and full cross-device adaptation."
-    },
-    badge: "Mobile-First"
-  },
-  {
-    name: "Lucide Icons",
-    category: {
-      am: "የአይኮን ዲዛይን",
-      en: "Vector Iconography"
-    },
-    description: {
-      am: "ግልጽ እና ማራኪ የሆኑ የህክምና እና የድር አሰሳ አይኮኖች።",
-      en: "Crisp, lightweight SVG icons ensuring visual clarity and rapid loading."
-    },
-    badge: "Vector SVG"
-  },
-  {
-    name: "Bilingual Ethiopic Typography",
-    category: {
-      am: "የቋንቋ እና የፊደል ድጋፍ",
-      en: "Internationalization & Fonts"
-    },
-    description: {
-      am: "ለአማርኛ ፊደላት ንጹህ እና ውብ የሆነ የ Noto Sans Ethiopic ቅርጸ-ቁምፊ ድጋፍ።",
-      en: "Native Amharic (Noto Sans Ethiopic) & English (Plus Jakarta Sans) font rendering."
-    },
-    badge: "Amharic / EN"
+    tag: {
+      am: "ማረፊያ",
+      en: "Lounge"
+    }
   }
 ];

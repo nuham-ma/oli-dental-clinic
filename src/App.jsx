@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
-import WhyChooseUs from './components/WhyChooseUs';
+import ReviewsSection from './components/ReviewsSection';
 import ClinicGallery from './components/ClinicGallery';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -11,7 +11,7 @@ import EmergencyBanner from './components/EmergencyBanner';
 import AppointmentModal from './components/AppointmentModal';
 
 export default function App() {
-  // Default language is Amharic ('am') as requested, with instant toggle to English ('en')
+  // Default language is Amharic ('am') with instant English ('en') toggle
   const [lang, setLang] = useState('am');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [bookingPrefill, setBookingPrefill] = useState({});
@@ -27,65 +27,63 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col selection:bg-skybrand-100 selection:text-skybrand-900 font-sans">
-      {/* Navigation */}
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col selection:bg-skybrand-100 selection:text-skybrand-900 font-sans antialiased">
+      {/* 1. Navbar */}
       <Navbar 
         lang={lang} 
         setLang={setLang} 
         onOpenBooking={handleOpenBooking} 
       />
 
-      {/* Main Sections */}
+      {/* Main Content Flow */}
       <main className="flex-grow">
-        {/* Photo 1: Hero Section with Clinic Exterior */}
+        {/* 2. Hero */}
         <Hero 
           lang={lang} 
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* Photo 2: About Clinic with Treatment Room / Dental Chair */}
+        {/* 3. About / Clinic Introduction */}
         <AboutSection 
           lang={lang} 
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* Photo 3: 5 Verified Services + Dentist & Patient Treatment Photo */}
+        {/* 4. Services (Horizontal Alternating Editorial Layout) */}
         <ServicesSection 
           lang={lang} 
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* Why Choose Us: 4.9/5 Google Rating & Strict Standards */}
-        <WhyChooseUs 
+        {/* 5. Reviews (Google 4.9 from 47 reviews) */}
+        <ReviewsSection 
           lang={lang} 
-          onOpenBooking={handleOpenBooking} 
         />
 
-        {/* Real Photo Gallery of Oli Dental Clinic */}
+        {/* 6. Clinic Photos (Compact Horizontal Carousel) */}
         <ClinicGallery 
           lang={lang} 
         />
 
-        {/* Contact & Location: Grace City Mall 3rd Floor, Verified Phones & Social */}
+        {/* 7. Contact + Google Maps */}
         <ContactSection 
           lang={lang} 
           onOpenBooking={handleOpenBooking} 
         />
       </main>
 
-      {/* Footer with Verified Social Links */}
+      {/* 8. Minimal Footer */}
       <Footer 
         lang={lang} 
-        onOpenBooking={handleOpenBooking} 
       />
 
-      {/* Floating Action Banner */}
+      {/* Floating Call & Booking Action */}
       <EmergencyBanner 
         lang={lang} 
         onOpenBooking={handleOpenBooking} 
       />
 
-      {/* Booking Modal */}
+      {/* Appointment Request Modal */}
       <AppointmentModal 
         isOpen={isBookingOpen} 
         onClose={handleCloseBooking} 
