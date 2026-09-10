@@ -79,12 +79,18 @@ export const clinicInfo = {
 };
 
 /**
- * 5 Verified Services with optimized photo paths and concise descriptions
+ * 5 Verified Services using the exact requested image files:
+ * - Braces -> braces.jpg
+ * - Teeth Cleaning -> teethcleaning.jpg
+ * - Dental Filling -> dental-filling.jpg
+ * - Zirconia Crown -> zicronia.jpg
+ * - Other Dental Care Services -> instrument.jpg
  */
 export const verifiedServices = [
   {
     id: "braces",
     number: "01",
+    isDualImage: true,
     title: {
       am: "የጥርስ ማስተካከያ (Braces)",
       en: "Braces & Orthodontics"
@@ -93,12 +99,15 @@ export const verifiedServices = [
       am: "ያልተስተካከሉ፣ የተነባበሩ ወይም ክፍተት ያላቸውን ጥርሶች በዘመናዊ የጥርስ ማስተካከያ ደረጃውን በጠበቀ መልኩ ማስተካከል።",
       en: "Precision alignment for crowded, spaced, or irregular teeth using modern orthodontic brackets to create a confident, healthy smile."
     },
-    image: "/images/brace.jpg",
-    alt: "Orthodontic braces clinical treatment"
+    beforeImage: "/images/teeth_before.jpg",
+    afterImage: "/images/teeth_after.jpg",
+    image: "/images/teeth_before.jpg",
+    alt: "Orthodontic braces treatment"
   },
   {
     id: "teeth-cleaning",
     number: "02",
+    isDualImage: false,
     title: {
       am: "የጥርስ ማጽዳት (Teeth Cleaning)",
       en: "Teeth Cleaning & Scaling"
@@ -107,12 +116,13 @@ export const verifiedServices = [
       am: "በጥርስ እና ድድ ላይ የሚከማቸውን ቆሻሻ እና ካልኩለስ በዘመናዊ አልትራሶኒክ መሳሪያ በማስወገድ የድድ ጤንነትን መጠበቅ እና የአፍ ጠረንን ማደስ።",
       en: "Ultrasonic scaling and polishing to remove plaque, calculus buildup, and stains while protecting long-term gum vitality."
     },
-    image: "/images/doctor.jpg",
+    image: "/images/teethcleaning.jpg",
     alt: "Ultrasonic teeth cleaning procedure"
   },
   {
     id: "dental-filling",
     number: "03",
+    isDualImage: true,
     title: {
       am: "የጥርስ ሙሌት (Dental Filling)",
       en: "Tooth-Colored Dental Filling"
@@ -121,12 +131,15 @@ export const verifiedServices = [
       am: "በመበስበስ ወይም በስብራት የተጎዱ ጥርሶችን ከተፈጥሮ ጥርስ ቀለም ጋር በሚመሳሰል ጠንካራ እና ጥራት ባለው ንጥረ ነገር በጥንቃቄ መሙላት።",
       en: "High-strength composite dental fillings that match your natural tooth shade, restoring full structure and stopping decay."
     },
-    image: "/images/filling.jpg",
-    alt: "Composite tooth restoration filling"
+    beforeImage: "/images/dental-filling_before.jpg",
+    afterImage: "/images/dental_after.jpg",
+    image: "/images/dental-filling.jpg",
+    alt: "Tooth-colored composite dental filling"
   },
   {
     id: "zirconia-crown",
     number: "04",
+    isDualImage: true,
     title: {
       am: "የዚርኮኒያ ጥርስ ሽፋን (Zirconia Crown)",
       en: "Zirconia Crowns"
@@ -135,18 +148,21 @@ export const verifiedServices = [
       am: "እጅግ ከፍተኛ ጥንካሬ እና የተፈጥሮ ውበት ባላቸው የዚርኮኒያ ሽፋኖች አማካኝነት የተጎዱ ወይም የተሰበሩ ጥርሶችን ለረጅም ዓመታት ማዳን።",
       en: "Ultra-durable, biocompatible zirconia crowns providing authentic tooth translucency and long-lasting chewing strength."
     },
-    image: "/images/zirconiya.jpg",
-    alt: "Custom aesthetic zirconia dental crown"
+    beforeImage: "/images/zicronia_before.jpg",
+    afterImage: "/images/zicronia_after.jpg",
+    image: "/images/zicronia.jpg",
+    alt: "Aesthetic zirconia dental crown"
   },
   {
     id: "other-services",
     number: "05",
+    isDualImage: false,
     title: {
       am: "አጠቃላይ የጥርስ ሕክምና አገልግሎቶች",
       en: "Comprehensive Dental Care"
     },
     shortDesc: {
-      am: " የጥርስ እና የአፍ ምርመራ፣ የጥርስ ማውጣት፣ እና የተለያዩ የጥርስ ጤና አጠባበቅ አገልግሎቶች በዘመናዊ እና ንጹህ የህክምና መሳሪያዎች።",
+      am: "የጥርስ እና የአፍ ምርመራ፣ የጥርስ ማውጣት፣ እና የተለያዩ የጥርስ ጤና አጠባበቅ አገልግሎቶች በዘመናዊ እና ንጹህ የህክምና መሳሪያዎች።",
       en: "Full oral diagnostic checkups, gentle extractions, preventative care, and specialized treatments for the entire family."
     },
     image: "/images/instrument.jpg",

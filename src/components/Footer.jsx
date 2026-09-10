@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, ArrowUp } from 'lucide-react';
+import { Phone, ArrowUp, MapPin, Clock } from 'lucide-react';
 import { clinicInfo } from '../data/clinicData';
 import SocialLinksBar from './SocialIcons';
 
@@ -9,63 +9,99 @@ export default function Footer({ lang = 'am' }) {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-400 text-xs py-8 border-t border-slate-900">
+    <footer className="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        {/* Main Footer Row */}
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 pb-8 border-b border-slate-900">
           
-          {/* Logo & Clinic Identification */}
-          <div className="flex items-center gap-3">
-            <img 
-              src="/images/logo.jpg" 
-              alt="Oli Dental Clinic Logo" 
-              className="w-8 h-8 rounded-lg object-contain bg-white p-0.5"
-            />
-            <div>
-              <div className="font-extrabold text-sm text-white">
-                Oli Dental <span className="text-skybrand-400">Clinic</span>
-              </div>
-              <div className="text-[11px] text-slate-400">
-                {clinicInfo.slogan[lang]} • {clinicInfo.location.short[lang]}
+          {/* Brand Section with Phone Numbers Underneath */}
+          <div className="space-y-3 max-w-md">
+            
+            {/* Logo & Name */}
+            <div className="flex items-center gap-3">
+              <img 
+                src="/images/logo.jpg" 
+                alt="Oli Dental Clinic Logo" 
+                className="w-9 h-9 rounded-lg object-contain bg-white p-0.5 shadow-sm"
+              />
+              <div>
+                <div className="font-extrabold text-base text-white tracking-tight">
+                  Oli Dental <span className="text-skybrand-400">Clinic</span>
+                </div>
+                <div className="text-[11px] text-slate-400">
+                  {clinicInfo.slogan[lang]}
+                </div>
               </div>
             </div>
+
+            {/* Short Location & Hours */}
+            <div className="text-[11px] text-slate-400 flex flex-col gap-1 pt-1">
+              <div className="flex items-center gap-1.5 text-slate-300">
+                <MapPin className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
+                <span>{clinicInfo.location.short[lang]}</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-slate-300">
+                <Clock className="w-3.5 h-3.5 text-dental-400 shrink-0" />
+                <span>{clinicInfo.hours.display[lang]}</span>
+              </div>
+            </div>
+
+            {/* Phone Numbers Placed at the Bottom of the Brand Section */}
+            <div className="pt-2 flex flex-wrap items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-1.5 text-slate-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                <Phone className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
+                <a 
+                  href={clinicInfo.phones[0].tel} 
+                  className="font-bold text-slate-200 hover:text-white transition"
+                >
+                  {clinicInfo.phones[0].display}
+                </a>
+              </div>
+
+              <div className="flex items-center gap-1.5 text-slate-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                <Phone className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
+                <a 
+                  href={clinicInfo.phones[1].tel} 
+                  className="font-bold text-slate-200 hover:text-white transition"
+                >
+                  {clinicInfo.phones[1].display}
+                </a>
+              </div>
+            </div>
+
           </div>
 
-          {/* Phone Numbers */}
-          <div className="flex items-center gap-3 text-slate-300">
-            <a href={clinicInfo.phones[0].tel} className="hover:text-white transition">
-              {clinicInfo.phones[0].display}
-            </a>
-            <span className="text-slate-700">|</span>
-            <a href={clinicInfo.phones[1].tel} className="hover:text-white transition">
-              {clinicInfo.phones[1].display}
-            </a>
-          </div>
-
-          {/* Social Links & Scroll Top */}
-          <div className="flex items-center gap-4">
-            <SocialLinksBar iconSize="w-3.5 h-3.5" />
+          {/* Social Links & Back to Top */}
+          <div className="flex flex-col md:items-end gap-3.5">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              {lang === 'am' ? 'ማህበራዊ ሚዲያዎቻችን' : 'Connect With Us'}
+            </span>
+            <SocialLinksBar iconSize="w-4 h-4" />
 
             <button
               onClick={scrollToTop}
-              className="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center cursor-pointer border border-slate-800"
+              className="mt-2 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition border border-slate-800 text-xs font-semibold cursor-pointer"
               aria-label="Scroll back to top"
             >
+              <span>{lang === 'am' ? 'ወደ ላይ ውጣ' : 'Back to top'}</span>
               <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
 
         </div>
 
-        {/* Minimal Copyright */}
-        <div className="mt-6 pt-4 border-t border-slate-900/80 text-center text-[11px] text-slate-400">
-  <div>
-    © {new Date().getFullYear()} {clinicInfo.name[lang]}. All rights reserved.
-  </div>
+        {/* Minimal Copyright Row */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 text-center sm:text-left">
+          <div>
+            © {new Date().getFullYear()} {clinicInfo.name[lang]}. All rights reserved.
+          </div>
 
-  <div className="mt-2 text-[10px] text-slate-500">
-    Internship Project • Developed by an internship student at Possible Technology P.L.C.
-  </div>
-</div>
+          <div className="text-[10px] text-slate-400">
+            Internship Project • Developed by an internship student at Possible Technology P.L.C.
+          </div>
+        </div>
+
       </div>
     </footer>
   );
