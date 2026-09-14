@@ -2,9 +2,9 @@ import React from 'react';
 import { 
   Phone, 
   Calendar, 
-  Star, 
   ArrowRight,
   ShieldCheck,
+  MapPin,
   ChevronDown
 } from 'lucide-react';
 import { clinicInfo } from '../data/clinicData';
@@ -18,17 +18,13 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
           {/* Left Column: Headline & Action */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Google Rating Verified Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-800 text-xs font-bold mb-6 hover-lift">
-              <div className="flex items-center gap-0.5 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                ))}
-              </div>
-              <span className="text-slate-900 font-extrabold">{clinicInfo.googleRating.score} / 5.0</span>
-              <span className="text-slate-400">•</span>
+            {/* Verified Location & Clinical Standards Badge (No Star Icons) */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-slate-800 text-sm font-semibold mb-6 hover-lift">
+              <MapPin className="w-4 h-4 text-skybrand-600 shrink-0" />
+              <span className="text-slate-900 font-bold">{clinicInfo.location.short[lang]}</span>
+              <span className="text-slate-300">•</span>
               <span className="text-slate-600 font-medium">
-                {clinicInfo.googleRating[lang === 'am' ? 'amText' : 'enText']}
+                {lang === 'am' ? '3ኛ ፎቅ' : '3rd Floor'}
               </span>
             </div>
 
@@ -45,13 +41,13 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
               )}
             </h1>
 
-            {/* Subordinate Clinic Motto (Noticeably smaller supporting text) */}
-            <div className="text-base sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-6">
+            {/* Subordinate Clinic Motto */}
+            <div className="text-lg sm:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-6">
               {clinicInfo.slogan[lang]}
             </div>
 
-            {/* Short, elegant narrative */}
-            <p className="text-sm sm:text-base lg:text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
+            {/* Narrative Body Paragraph */}
+            <p className="text-base sm:text-lg lg:text-xl text-slate-700 mb-8 max-w-xl leading-relaxed">
               {lang === 'am' ? (
                 'በመገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ ላይ የሚገኘው ክሊኒካችን፤ ለርስዎ እና ለቤተሰብዎ ጥራት ያለው የጥርስ ማስተካከያ (Braces)፣ የጥርስ ማጽዳት፣ የጥርስ ሙሌት፣ የዚርኮኒያ ሽፋን እና የተሟሉ የጥርስ ሕክምናዎችን በየቀኑ ይሰጣል።'
               ) : (
@@ -63,19 +59,19 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
               <button
                 onClick={() => onOpenBooking()}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/25 transition-all hover-lift active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/25 transition-all hover-lift active:scale-95"
               >
-                <Calendar className="w-4 h-4" />
+                <Calendar className="w-5 h-5" />
                 <span>{lang === 'am' ? 'ቀጠሮ ያስይዙ' : 'Book an Appointment'}</span>
-                <ArrowRight className="w-4 h-4 ml-1" />
+                <ArrowRight className="w-5 h-5 ml-1" />
               </button>
 
               <a
                 href="#services"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-skybrand-300 transition shadow-sm hover-lift"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-base text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-skybrand-300 transition shadow-sm hover-lift"
               >
                 <span>{lang === 'am' ? 'አገልግሎቶቻችንን ይመልከቱ' : 'View Services'}</span>
-                <ChevronDown className="w-4 h-4 text-slate-400" />
+                <ChevronDown className="w-5 h-5 text-slate-400" />
               </a>
             </div>
 
@@ -97,19 +93,19 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Subtle Info Pill */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 shadow-lg border border-white/50">
-                  <div className="flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-white/50">
+                  <div className="flex items-center justify-between gap-2">
                     <div>
-                      <h3 className="font-extrabold text-slate-900 text-xs sm:text-sm">
+                      <h3 className="font-extrabold text-slate-900 text-base sm:text-lg">
                         Oli Dental Clinic
                       </h3>
-                      <p className="text-[11px] text-slate-500">
+                      <p className="text-sm text-slate-600">
                         {clinicInfo.location.short[lang]}
                       </p>
                     </div>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                      09:00 AM – 06:30 PM
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-bold shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      {lang === 'am' ? 'ከጠዋቱ 3:00 – ማታ 12:30' : '9:00 AM – 6:30 PM'}
                     </span>
                   </div>
                 </div>

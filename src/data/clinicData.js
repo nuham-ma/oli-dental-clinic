@@ -24,7 +24,6 @@ export const clinicInfo = {
   googleRating: {
     score: "4.9",
     totalReviews: "47",
-    stars: 5,
     source: "Google Reviews",
     amText: "4.9 ከ 47 የጉግል አስተያየቶች",
     enText: "4.9 from 47 Google reviews"
@@ -38,17 +37,17 @@ export const clinicInfo = {
       am: "መገናኛ፣ ግሬስ ሲቲ ሞል",
       en: "Megenagna, Grace City Mall"
     },
-    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.547372957199!2d38.79954057589886!3d9.013702189218204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8504f76239f3%3A0xb5b79e6f1406dc57!2sGrace%20City%20Mall!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set",
-    googleMapsUrl: "https://maps.google.com/?q=Grace+City+Mall+Megenagna+Addis+Ababa"
+    googleMapsEmbedUrl: "https://maps.google.com/maps?q=Oli+Dental+Clinic+Grace+City+Mall+Megenagna+Addis+Ababa&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Oli+Dental+Clinic+Megenagna+Grace+City+Mall+Addis+Ababa"
   },
   hours: {
     display: {
       am: "ከሰኞ – እሑድ፡ ከጠዋቱ 3:00 – ማታ 12:30",
-      en: "Monday – Sunday: 09:00 AM – 06:30 PM"
+      en: "Monday – Sunday: 9:00 AM – 6:30 PM"
     },
     short: {
-      am: "ከሰኞ – እሑድ፡ 09:00 – 18:30",
-      en: "Mon – Sun: 09:00 AM – 06:30 PM"
+      am: "ከሰኞ – እሑድ፡ ከጠዋቱ 3:00 – ማታ 12:30",
+      en: "Mon – Sun: 9:00 AM – 6:30 PM"
     }
   },
   phones: [
@@ -80,10 +79,10 @@ export const clinicInfo = {
 
 /**
  * 5 Verified Services using the exact requested image files:
- * - Braces -> braces.jpg
+ * - Braces -> teeth_before.jpg & teeth_after.jpg
  * - Teeth Cleaning -> teethcleaning.jpg
- * - Dental Filling -> dental-filling.jpg
- * - Zirconia Crown -> zicronia.jpg
+ * - Dental Filling -> dental-filling_before.jpg & dental_after.jpg
+ * - Zirconia Crown -> zicronia_before.jpg & zicronia_after.jpg
  * - Other Dental Care Services -> instrument.jpg
  */
 export const verifiedServices = [
@@ -145,7 +144,7 @@ export const verifiedServices = [
       en: "Zirconia Crowns"
     },
     shortDesc: {
-      am: "እጅግ ከፍተኛ ጥንካሬ እና የተፈጥሮ ውበት ባላቸው የዚርኮኒያ ሽፋኖች አማካኝነት የተጎዱ ወይም የተሰበሩ ጥርሶችን ለረጅም ዓመታት ማዳን።",
+      am: "የተጎዱ ወይም የተሰበሩ ጥርሶችን በተፈጥሮ ጥርስ መልክ እና ከፍተኛ ጥንካሬ ባለው ጥራት ያለው የዚርኮኒያ ሽፋን ወደ ቀድሞ ጥንካሬያቸው እና ውበታቸው መመለስ።",
       en: "Ultra-durable, biocompatible zirconia crowns providing authentic tooth translucency and long-lasting chewing strength."
     },
     beforeImage: "/images/zicronia_before.jpg",
@@ -173,23 +172,8 @@ export const verifiedServices = [
 export const reviewsSummary = {
   rating: "4.9",
   totalCount: "47",
-  stars: 5,
   source: "Google Reviews",
-  metrics: {
-    am: [
-      { label: "የአገልግሎት ጥራት", score: "5.0" },
-      { label: "የክሊኒኩ ንጽህና", score: "5.0" },
-      { label: "የባለሙያዎች እንክብካቤ", score: "4.9" },
-      { label: "የቀጠሮ አያያዝ", score: "4.9" }
-    ],
-    en: [
-      { label: "Treatment Quality", score: "5.0" },
-      { label: "Clinic Sanitation", score: "5.0" },
-      { label: "Patient Care", score: "4.9" },
-      { label: "Appointment Punctuality", score: "4.9" }
-    ]
-  },
-  googleMapsReviewUrl: "https://maps.google.com/?q=Grace+City+Mall+Megenagna+Addis+Ababa"
+  googleMapsReviewUrl: "https://www.google.com/maps/search/?api=1&query=Oli+Dental+Clinic+Megenagna+Grace+City+Mall+Addis+Ababa"
 };
 
 /**

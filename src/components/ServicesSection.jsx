@@ -1,22 +1,21 @@
 import React from 'react';
-import { Calendar, ArrowRight, Sparkles } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { verifiedServices } from '../data/clinicData';
 
 export default function ServicesSection({ lang = 'am', onOpenBooking }) {
   return (
-    <section id="services" className="py-10 lg:py-14 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+    <section id="services" className="py-12 lg:py-16 bg-slate-50 relative overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Compact Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 lg:mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-skybrand-100 text-skybrand-700 text-xs font-bold uppercase tracking-wider mb-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-skybrand-600" />
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-8 lg:mb-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-skybrand-100 text-skybrand-700 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
             <span>{lang === 'am' ? 'የጥርስ ሕክምና አገልግሎቶች' : 'Our Dental Services'}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight mb-1.5">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
             {lang === 'am' ? 'በክሊኒካችን የሚሰጡ ዋና ዋና አገልግሎቶች' : 'Specialized Treatments at Oli Dental'}
           </h2>
-          <p className="text-slate-600 text-xs sm:text-sm">
+          <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
             {lang === 'am' ? (
               'ዘመናዊ የጥርስ ማስተካከያ፣ የጥርስ ማጽዳት፣ የጥርስ ሙሌት እና የዚርኮኒያ ሽፋኖችን ጨምሮ የተሟላ እንክብካቤ።'
             ) : (
@@ -26,7 +25,7 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
         </div>
 
         {/* Compact 3-Column Desktop Grid (Responsive on Tablet and Mobile) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {verifiedServices.map((service, idx) => (
             <div
               key={service.id}
@@ -59,7 +58,7 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
                     </div>
 
                     {/* Service Number Tag */}
-                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono font-extrabold text-slate-900 shadow-sm z-10">
+                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm z-10">
                       {service.number}
                     </div>
                   </div>
@@ -74,37 +73,37 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none"></div>
 
                     {/* Service Number Tag */}
-                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono font-extrabold text-slate-900 shadow-sm">
+                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm">
                       {service.number}
                     </div>
                   </div>
                 )}
 
-                {/* Compact Content Body */}
-                <div className="p-3.5 sm:p-4">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-skybrand-600 mb-0.5 block">
+                {/* Content Body */}
+                <div className="p-5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-skybrand-600 mb-1.5 block">
                     {lang === 'am' ? 'አገልግሎት' : 'Treatment'}
                   </span>
 
-                  <h3 className="text-sm sm:text-base font-bold text-slate-900 mb-1 leading-snug group-hover:text-skybrand-600 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-skybrand-600 transition-colors">
                     {service.title[lang]}
                   </h3>
 
-                  <p className="text-slate-600 text-xs leading-relaxed line-clamp-2">
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3">
                     {service.shortDesc[lang]}
                   </p>
                 </div>
               </div>
 
               {/* Compact Booking CTA */}
-              <div className="p-3.5 sm:p-4 pt-0">
+              <div className="p-5 pt-0">
                 <button
                   onClick={() => onOpenBooking({ serviceId: service.id })}
-                  className="w-full py-2 px-3 rounded-lg bg-slate-100 group-hover:bg-slate-900 group-hover:text-white text-slate-800 text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer active:scale-98"
+                  className="w-full py-3 px-4 rounded-xl bg-slate-100 group-hover:bg-slate-900 group-hover:text-white text-slate-800 text-sm sm:text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-98"
                 >
-                  <Calendar className="w-3.5 h-3.5 text-skybrand-500 group-hover:text-white transition-colors" />
+                  <Calendar className="w-4 h-4 text-skybrand-500 group-hover:text-white transition-colors" />
                   <span>{lang === 'am' ? 'ቀጠሮ ያስይዙ' : 'Book Treatment'}</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-0.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-4 h-4 ml-0.5 opacity-60 group-hover:opacity-100 transition-opacity" />
                 </button>
               </div>
 
