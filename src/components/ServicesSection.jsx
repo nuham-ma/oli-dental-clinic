@@ -9,13 +9,13 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 lg:mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-skybrand-100 text-skybrand-700 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-skybrand-100 text-skybrand-700 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider mb-2">
             <span>{lang === 'am' ? 'የጥርስ ሕክምና አገልግሎቶች' : 'Our Dental Services'}</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
+          <h2 className="font-heading text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-2">
             {lang === 'am' ? 'በክሊኒካችን የሚሰጡ ዋና ዋና አገልግሎቶች' : 'Specialized Treatments at Oli Dental'}
           </h2>
-          <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+          <p className="font-sans text-slate-700 text-base sm:text-lg leading-relaxed">
             {lang === 'am' ? (
               'ዘመናዊ የጥርስ ማስተካከያ፣ የጥርስ ማጽዳት፣ የጥርስ ሙሌት እና የዚርኮኒያ ሽፋኖችን ጨምሮ የተሟላ እንክብካቤ።'
             ) : (
@@ -58,7 +58,7 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
                     </div>
 
                     {/* Service Number Tag */}
-                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm z-10">
+                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm z-10 font-heading">
                       {service.number}
                     </div>
                   </div>
@@ -73,7 +73,7 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none"></div>
 
                     {/* Service Number Tag */}
-                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm">
+                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-xs font-mono font-extrabold text-slate-900 shadow-sm font-heading">
                       {service.number}
                     </div>
                   </div>
@@ -81,15 +81,15 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
 
                 {/* Content Body */}
                 <div className="p-5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-skybrand-600 mb-1.5 block">
+                  <span className="text-xs font-heading font-bold uppercase tracking-wider text-skybrand-600 mb-1.5 block">
                     {lang === 'am' ? 'አገልግሎት' : 'Treatment'}
                   </span>
 
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-skybrand-600 transition-colors">
+                  <h3 className="font-heading text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-skybrand-600 transition-colors">
                     {service.title[lang]}
                   </h3>
 
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3">
+                  <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3">
                     {service.shortDesc[lang]}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default function ServicesSection({ lang = 'am', onOpenBooking }) {
               <div className="p-5 pt-0">
                 <button
                   onClick={() => onOpenBooking({ serviceId: service.id })}
-                  className="w-full py-3 px-4 rounded-xl bg-slate-100 group-hover:bg-slate-900 group-hover:text-white text-slate-800 text-sm sm:text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+                  className="w-full py-3 px-4 rounded-xl bg-slate-100 group-hover:bg-slate-900 group-hover:text-white text-slate-800 text-sm sm:text-base font-heading font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-98"
                 >
                   <Calendar className="w-4 h-4 text-skybrand-500 group-hover:text-white transition-colors" />
                   <span>{lang === 'am' ? 'ቀጠሮ ያስይዙ' : 'Book Treatment'}</span>

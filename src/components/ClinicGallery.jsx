@@ -42,14 +42,14 @@ export default function ClinicGallery({ lang = 'am' }) {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-skybrand-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-skybrand-400 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider mb-2.5">
             <Camera className="w-4 h-4" />
             <span>{lang === 'am' ? 'የክሊኒካችን ፎቶዎች' : 'Clinic Photo Showcase'}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
             {lang === 'am' ? 'ኦሊ የጥርስ ሕክምና ክሊኒክን በፎቶ ይመልከቱ' : 'Experience Our Modern Dental Clinic'}
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg mt-2 leading-relaxed">
+          <p className="font-sans text-slate-300 text-base sm:text-lg mt-2 leading-relaxed">
             {lang === 'am' ? (
               'ንጹህ፣ ምቹ እና በዘመናዊ የጥርስ ሕክምና ቁሳቁሶች የተሟላ ክሊኒክ በመገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ።'
             ) : (
@@ -163,17 +163,17 @@ export default function ClinicGallery({ lang = 'am' }) {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent pointer-events-none"></div>
 
                       {/* Tag pill */}
-                      <div className="absolute top-3 right-3 bg-gradient-to-r from-skybrand-600 to-dental-600 text-white font-bold text-[10px] sm:text-xs px-3 py-1 rounded-full shadow-md">
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-skybrand-600 to-dental-600 text-white font-heading font-bold text-[10px] sm:text-xs px-3 py-1 rounded-full shadow-md">
                         {photo.tag[lang]}
                       </div>
                     </div>
 
                     {/* Card Content Bottom */}
                     <div className="p-4 sm:p-5 text-left bg-white">
-                      <h4 className="font-extrabold text-slate-900 text-base leading-snug">
+                      <h4 className="font-heading font-extrabold text-slate-900 text-base leading-snug">
                         {photo.title[lang]}
                       </h4>
-                      <p className="text-slate-600 text-sm mt-1 line-clamp-1">
+                      <p className="font-sans text-slate-600 text-sm mt-1 line-clamp-1">
                         {photo.subtitle[lang]}
                       </p>
                     </div>

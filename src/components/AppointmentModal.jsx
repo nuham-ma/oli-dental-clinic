@@ -66,14 +66,14 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
             <X className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center gap-2 text-skybrand-200 text-xs font-bold uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-skybrand-200 text-xs font-heading font-bold uppercase tracking-wider mb-1">
             <Calendar className="w-4 h-4" />
             <span>{lang === 'am' ? 'የቀጠሮ ማመልከቻ' : 'Appointment Request'}</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-white">
             {lang === 'am' ? 'በኦሊ የጥርስ ሕክምና ክሊኒክ ቀጠሮ ያስይዙ' : 'Schedule a Visit at Oli Dental'}
           </h3>
-          <p className="text-skybrand-100 text-xs mt-1">
+          <p className="font-sans text-skybrand-100 text-xs sm:text-sm mt-1">
             {clinicInfo.slogan[lang]} • {clinicInfo.location.short[lang]}
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
                 <CheckCircle2 className="w-10 h-10" />
               </div>
 
-              <h4 className="text-xl font-extrabold text-slate-900 mb-2">
+              <h4 className="font-heading text-xl font-extrabold text-slate-900 mb-2">
                 {lang === 'am' ? 'የቀጠሮ ማመልከቻዎ ደርሶናል' : 'Appointment Request Received!'}
               </h4>
               <p className="text-slate-700 text-sm sm:text-base mb-6 max-w-sm mx-auto leading-relaxed">
@@ -235,7 +235,7 @@ export default function AppointmentModal({ isOpen, onClose, initialData = {}, la
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 text-white font-bold text-base shadow-md transition flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 text-white font-heading font-bold text-base shadow-md transition flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
                   <span>{lang === 'am' ? 'የቀጠሮ ማመልከቻ አስገባ' : 'Submit Appointment Request'}</span>

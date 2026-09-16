@@ -104,10 +104,10 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-sm border border-slate-100 bg-white"
               />
               <div className="flex flex-col">
-                <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 group-hover:text-skybrand-600 transition-colors">
+                <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-skybrand-600 transition-colors">
                   Oli Dental <span className="text-skybrand-600">Clinic</span>
                 </span>
-                <span className="text-xs font-medium text-slate-500">
+                <span className="text-xs font-medium text-slate-500 font-sans">
                   {clinicInfo.tagline[lang]}
                 </span>
               </div>
@@ -119,7 +119,7 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
                 <a
                   key={idx}
                   href={link.href}
-                  className="px-3.5 py-2 rounded-lg text-sm sm:text-base font-semibold text-slate-700 hover:text-skybrand-600 hover:bg-slate-50 transition-colors"
+                  className="px-3.5 py-2 rounded-lg text-sm sm:text-base font-semibold text-slate-700 hover:text-skybrand-600 hover:bg-slate-50 transition-colors font-sans"
                 >
                   {link.name}
                 </a>
@@ -130,7 +130,7 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
             <div className="hidden sm:flex items-center gap-3">
               <button
                 onClick={() => onOpenBooking()}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/20 transition-all duration-200 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading font-bold text-sm sm:text-base text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/20 transition-all duration-200 active:scale-95"
               >
                 <Calendar className="w-4 h-4 text-white" />
                 <span>{lang === 'am' ? 'ቀጠሮ ያስይዙ' : 'Book Appointment'}</span>

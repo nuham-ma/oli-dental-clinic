@@ -26,17 +26,17 @@ export default function Footer({ lang = 'am' }) {
                 className="w-10 h-10 rounded-lg object-contain bg-white p-0.5 shadow-sm"
               />
               <div>
-                <div className="font-extrabold text-lg text-white tracking-tight">
+                <div className="font-heading font-extrabold text-lg sm:text-xl text-white tracking-tight">
                   Oli Dental <span className="text-skybrand-400">Clinic</span>
                 </div>
-                <div className="text-sm text-slate-400">
+                <div className="font-sans text-sm text-slate-400">
                   {clinicInfo.slogan[lang]}
                 </div>
               </div>
             </div>
 
             {/* Short Location & Hours */}
-            <div className="text-sm sm:text-base text-slate-400 flex flex-col gap-1.5 pt-1">
+            <div className="font-sans text-sm sm:text-base text-slate-400 flex flex-col gap-1.5 pt-1">
               <div className="flex items-center gap-2 text-slate-300">
                 <MapPin className="w-4 h-4 text-skybrand-400 shrink-0" />
                 <span>{clinicInfo.location.short[lang]}</span>
@@ -53,7 +53,7 @@ export default function Footer({ lang = 'am' }) {
                 <Phone className="w-4 h-4 text-skybrand-400 shrink-0" />
                 <a 
                   href={clinicInfo.phones[0].tel} 
-                  className="font-bold text-slate-200 hover:text-white transition text-sm sm:text-base"
+                  className="font-heading font-bold text-slate-200 hover:text-white transition text-sm sm:text-base"
                 >
                   {clinicInfo.phones[0].display}
                 </a>
@@ -63,7 +63,7 @@ export default function Footer({ lang = 'am' }) {
                 <Phone className="w-4 h-4 text-skybrand-400 shrink-0" />
                 <a 
                   href={clinicInfo.phones[1].tel} 
-                  className="font-bold text-slate-200 hover:text-white transition text-sm sm:text-base"
+                  className="font-heading font-bold text-slate-200 hover:text-white transition text-sm sm:text-base"
                 >
                   {clinicInfo.phones[1].display}
                 </a>
@@ -74,14 +74,14 @@ export default function Footer({ lang = 'am' }) {
 
           {/* Social Links & Back to Top */}
           <div className="flex flex-col md:items-end gap-3.5">
-            <span className="text-sm font-bold uppercase tracking-wider text-slate-400">
+            <span className="font-heading text-sm font-bold uppercase tracking-wider text-slate-400">
               {lang === 'am' ? 'ማህበራዊ ሚዲያዎቻችን' : 'Connect With Us'}
             </span>
             <SocialLinksBar iconSize="w-5 h-5" />
 
             <button
               onClick={scrollToTop}
-              className="mt-2 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition border border-slate-800 text-sm font-semibold cursor-pointer"
+              className="mt-2 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition border border-slate-800 text-sm font-heading font-semibold cursor-pointer"
               aria-label="Scroll back to top"
             >
               <span>{lang === 'am' ? 'ወደ ላይ ውጣ' : 'Back to top'}</span>
