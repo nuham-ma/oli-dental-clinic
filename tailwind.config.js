@@ -40,10 +40,11 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['Outfit', 'Noto Sans Ethiopic', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Outfit', 'Noto Sans Ethiopic', 'system-ui', '-apple-system', 'sans-serif'],
-        sans: ['Plus Jakarta Sans', 'Noto Sans Ethiopic', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['Plus Jakarta Sans', 'Noto Sans Ethiopic', 'system-ui', '-apple-system', 'sans-serif'],
+        poppins: ['Poppins', 'Noto Sans Ethiopic', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['Poppins', 'Noto Sans Ethiopic', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Poppins', 'Noto Sans Ethiopic', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Poppins', 'Plus Jakarta Sans', 'Noto Sans Ethiopic', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['Plus Jakarta Sans', 'Poppins', 'Noto Sans Ethiopic', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
         'soft': '0 4px 20px -2px rgba(14, 165, 233, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
