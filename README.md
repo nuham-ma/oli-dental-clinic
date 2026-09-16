@@ -7,7 +7,7 @@ A modern, responsive, and distinctive landing page for **Oli Dental Clinic** (Me
 ## 📍 Verified Clinic Information
 
 - **Clinic Name:** Oli Dental Clinic (ኦሊ የጥርስ ሕክምና ክሊኒክ)
-- **Slogan:** Modern Dentistry, Classic Values (ዘመናዊ የጥርስ ሕክምና፣ ጥንታዊ እሴቶች)
+- **Slogan:** Modern Dentistry, Classic Values (ዘመናዊ የጥርስ ሕክምና፣ ታማኝ አገልግሎት)
 - **Google Rating:** 4.9/5 from 47 reviews
 - **Location:** Megenagna, Grace City Mall, 3rd Floor, Addis Ababa, Ethiopia
 - **Opening Hours:** 
@@ -19,13 +19,13 @@ A modern, responsive, and distinctive landing page for **Oli Dental Clinic** (Me
 
 ---
 
-## 🦷 5 Verified Services (Horizontal Editorial Layout)
+## 🦷 5 Verified Services
 
-1. **Braces & Orthodontics (የጥርስ ማስተካከያ)**
-2. **Teeth Cleaning & Scaling (የጥርስ ማጽዳት)**
-3. **Tooth-Colored Dental Filling (የጥርስ ሙሌት)**
-4. **Zirconia Crowns (የዚርኮኒያ ጥርስ ሽፋን)**
-5. **Comprehensive Dental Care (አጠቃላይ የጥርስ ሕክምና አገልግሎቶች)**
+1. **Braces & Orthodontics (የጥርስ ማስተካከያ):** Dual side-by-side comparison (`teeth_before.jpg` & `teeth_after.jpg`)
+2. **Teeth Cleaning & Scaling (የጥርስ ማጽዳት):** Ultrasonic scaling (`teethcleaning.jpg`)
+3. **Tooth-Colored Dental Filling (የጥርስ ሙሌት):** Dual side-by-side comparison (`dental-filling_before.jpg` & `dental_after.jpg`)
+4. **Zirconia Crowns (የዚርኮኒያ ጥርስ ሽፋን):** Dual side-by-side comparison (`zicronia_before.jpg` & `zicronia_after.jpg`)
+5. **Comprehensive Dental Care (አጠቃላይ የጥርስ ሕክምና አገልግሎቶች):** Sterilized dental instrumentation (`instrument.jpg`)
 
 ---
 
@@ -37,27 +37,30 @@ A modern, responsive, and distinctive landing page for **Oli Dental Clinic** (Me
 
 ---
 
-## 🏛️ Page Flow (Strict 8-Step Structure)
+## 🏛️ Page Flow
 
 1. **Navbar:** Official logo, 6 clean navigation links, prominent language toggle (Amharic default / English), responsive mobile drawer.
-2. **Hero:** Prominent headline, supporting motto, verified 4.9★ rating badge, primary & secondary CTAs, authentic reception image.
+2. **Hero:** Headline, clinical motto, location badge, primary & secondary CTAs, authentic reception image.
 3. **About / Introduction:** Authentic treatment room & dental chair photo, clinical standards.
-4. **Services:** Horizontal alternating editorial layout with large photos and punchy descriptions.
-5. **Reviews:** Verified Google Reviews rating (4.9 / 5.0 from 47 reviews) with quality breakdown.
-6. **Clinic Photos:** Compact horizontal swipeable/scrollable gallery with navigation arrows.
-7. **Contact + Google Maps:** Essential contact cards, interactive Google Maps embed, and direct booking form.
-8. **Minimal Footer:** Compact footer with logo, contact, social links, and copyright.
+4. **Services:** 3-column responsive grid with before/after comparisons and service booking CTAs.
+5. **Reviews:** Verified Google Reviews rating (4.9 / 5.0 from 47 reviews) with direct link to Google Maps.
+6. **Clinic Photos:** Compact 3D Coverflow carousel of authentic clinic spaces.
+7. **Contact + Google Maps:** Direct contact cards, interactive Google Maps embed, and inquiry form.
+8. **Minimal Footer:** Clinic info, hours, phone pills, social links, and copyright.
 
 ---
 
 ## 🚀 How to Run the Project
 
 ```bash
-# 1. Navigate to the project directory
-cd "C:\Users\DELLL\.gemini\antigravity\scratch\oli-dental-clinic"
+# 1. Install dependencies (if needed)
+npm install
 
 # 2. Start the development server
 npm run dev
+
+# 3. Build for production
+npm run build
 ```
 
-Visit **`http://localhost:3000`** in your browser. All builds compile with **0 errors**.
+All builds compile cleanly with **0 errors**.
