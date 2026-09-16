@@ -36,10 +36,10 @@ export default function AboutSection({ lang = 'am', onOpenBooking }) {
                       <ShieldCheck className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-extrabold text-slate-900 text-base">
+                      <h4 className="font-heading font-extrabold text-slate-900 text-base">
                         {lang === 'am' ? 'ዘመናዊ የጥርስ ሕክምና ክፍል' : 'Modern Treatment Facility'}
                       </h4>
-                      <p className="text-sm text-slate-600">
+                      <p className="font-sans text-sm text-slate-600 leading-relaxed">
                         {lang === 'am' ? 'ደረጃውን የጠበቀ እና ምቹ የህክምና አካባቢ' : 'Strictly sanitized and patient-centered environment'}
                       </p>
                     </div>

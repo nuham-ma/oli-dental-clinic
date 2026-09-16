@@ -101,7 +101,7 @@ export default function ReviewsSection({ lang = 'am' }) {
                 </div>
               </div>
 
-              <div className="pt-1 flex items-center gap-2 text-sm text-slate-600 font-sans">
+              <div className="pt-1 flex items-center gap-2 text-sm text-slate-600 font-sans font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>
                   {lang === 'am' ? 'መረጃዎች ከትክክለኛ የጉግል ማፕ ፕሮፋይል የተወሰዱ ናቸው' : 'Verified Google Maps & Business Profile Data'}
