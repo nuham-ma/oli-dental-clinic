@@ -1,9 +1,7 @@
 import React from 'react';
 import { 
-  Phone, 
   Calendar, 
   ArrowRight,
-  ShieldCheck,
   MapPin,
   ChevronDown
 } from 'lucide-react';
@@ -15,30 +13,30 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
       <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
           
-          {/* Left Column: Headline & Action */}
+          {/* Left Column: Headline, Motto, Address & Action */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Verified Location & Clinical Standards Badge (No Star Icons) */}
-            <div className="inline-flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full bg-white border border-slate-200 shadow-sm text-slate-800 text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift font-heading max-w-full">
+            {/* 1. Primary Headline: Clinic Name */}
+            <h1 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.25] sm:leading-[1.2] mb-2 sm:mb-3 break-words w-full">
+              {clinicInfo.name[lang]}
+            </h1>
+
+            {/* 2. Subordinate Clinic Motto / Slogan */}
+            <div className="font-heading text-base xs:text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-3.5 xs:mb-4 sm:mb-5 leading-snug sm:leading-normal">
+              {clinicInfo.slogan[lang]}
+            </div>
+
+            {/* 3. Verified Location & Address Badge */}
+            <div className="inline-flex items-center flex-wrap gap-1.5 xs:gap-2 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full bg-white border border-slate-200 shadow-sm text-slate-800 text-xs sm:text-sm font-semibold mb-4 xs:mb-5 sm:mb-6 hover-lift font-heading max-w-full">
               <MapPin className="w-3.5 h-3.5 xs:w-4 xs:h-4 text-skybrand-600 shrink-0" />
-              <span className="text-slate-900 font-bold truncate">{clinicInfo.location.short[lang]}</span>
+              <span className="text-slate-900 font-bold">{clinicInfo.location.short[lang]}</span>
               <span className="text-slate-300">•</span>
               <span className="text-slate-600 font-medium shrink-0">
                 {lang === 'am' ? '3ኛ ፎቅ' : '3rd Floor'}
               </span>
             </div>
 
-            {/* Primary Headline */}
-            <h1 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.2] mb-2 sm:mb-3 break-words">
-              {clinicInfo.name[lang]}
-            </h1>
-
-            {/* Subordinate Clinic Motto */}
-            <div className="font-heading text-base xs:text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-4 sm:mb-6">
-              {clinicInfo.slogan[lang]}
-            </div>
-
-            {/* Narrative Body Paragraph */}
+            {/* 4. Narrative Body Paragraph */}
             <p className="font-sans text-sm xs:text-base sm:text-lg lg:text-xl text-slate-700 mb-6 sm:mb-8 max-w-xl leading-relaxed">
               {lang === 'am' ? (
                 'በመገናኛ ግሬስ ሲቲ ሞል 3ኛ ፎቅ ላይ የሚገኘው ክሊኒካችን፤ ለርስዎ እና ለቤተሰብዎ ጥራት ያለው የጥርስ ማስተካከያ (Braces)፣ የጥርስ ማጽዳት፣ የጥርስ ሙሌት፣ የዚርኮኒያ ሽፋን እና የተሟሉ የጥርስ ሕክምናዎችን በየቀኑ ይሰጣል።'
@@ -47,7 +45,7 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
               )}
             </p>
 
-            {/* Clear Primary & Secondary CTAs */}
+            {/* 5. Clear Primary & Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3.5 w-full sm:w-auto">
               <button
                 onClick={() => onOpenBooking()}
@@ -87,7 +85,7 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
 
                 {/* Subtle Info Pill */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-white/50">
-                  <div className="flex items-center justify-between gap-2">
+                  <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 xs:gap-2">
                     <div className="min-w-0">
                       <h3 className="font-heading font-extrabold text-slate-900 text-sm sm:text-base md:text-lg truncate">
                         Oli Dental Clinic
@@ -96,7 +94,7 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
                         {clinicInfo.location.short[lang]}
                       </p>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] sm:text-xs md:text-sm font-heading font-bold shrink-0">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] sm:text-xs md:text-sm font-heading font-bold shrink-0 self-start xs:self-auto">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                       <span>{lang === 'am' ? 'ከጠዋቱ 3:00 – ማታ 12:30' : '9:00 AM – 6:30 PM'}</span>
                     </span>
