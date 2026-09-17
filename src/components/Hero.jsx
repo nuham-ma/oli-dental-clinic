@@ -9,7 +9,10 @@ import { clinicInfo } from '../data/clinicData';
 
 export default function Hero({ lang = 'am', onOpenBooking }) {
   return (
-    <section id="home" className="relative pt-24 xs:pt-28 sm:pt-32 pb-10 xs:pb-12 sm:pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-gradient-to-b from-skybrand-50/50 via-white to-white">
+    <section 
+      id="home" 
+      className="relative pt-[132px] xs:pt-[140px] sm:pt-36 lg:pt-40 pb-10 xs:pb-12 sm:pb-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-skybrand-50/50 via-white to-white"
+    >
       <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
           
@@ -17,12 +20,20 @@ export default function Hero({ lang = 'am', onOpenBooking }) {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* 1. Primary Headline: Clinic Name */}
-            <h1 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.25] sm:leading-[1.2] mb-2 sm:mb-3 break-words w-full">
+            <h1 className={`font-heading font-extrabold tracking-tight text-slate-900 mb-2 sm:mb-3 break-words w-full ${
+              lang === 'am'
+                ? 'text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.32] sm:leading-[1.22]'
+                : 'text-2xl xs:text-3xl sm:text-5xl lg:text-6xl leading-[1.18] sm:leading-[1.15]'
+            }`}>
               {clinicInfo.name[lang]}
             </h1>
 
             {/* 2. Subordinate Clinic Motto / Slogan */}
-            <div className="font-heading text-base xs:text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-3.5 xs:mb-4 sm:mb-5 leading-snug sm:leading-normal">
+            <div className={`font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-skybrand-600 to-dental-600 mb-3.5 xs:mb-4 sm:mb-5 ${
+              lang === 'am'
+                ? 'text-sm xs:text-base sm:text-xl lg:text-2xl leading-normal'
+                : 'text-base xs:text-lg sm:text-2xl leading-snug sm:leading-normal'
+            }`}>
               {clinicInfo.slogan[lang]}
             </div>
 
