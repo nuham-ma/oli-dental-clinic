@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
@@ -16,6 +16,10 @@ export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [bookingPrefill, setBookingPrefill] = useState({});
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const handleOpenBooking = (prefillData = {}) => {
     setBookingPrefill(prefillData);
     setIsBookingOpen(true);
@@ -27,7 +31,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col selection:bg-skybrand-100 selection:text-skybrand-900 font-sans antialiased">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col selection:bg-skybrand-100 selection:text-skybrand-900 font-sans antialiased overflow-x-hidden w-full relative">
       {/* 1. Navbar */}
       <Navbar 
         lang={lang} 

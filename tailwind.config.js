@@ -39,12 +39,21 @@ export default {
           950: '#090d16',
         }
       },
+      screens: {
+        'xs': '375px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'Poppins', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Poppins', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
-        poppins: ['Poppins', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'Poppins', 'Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'Poppins', 'Menbere', '"Noto Serif Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
+        poppins: ['Poppins', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        amharic: ['Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'soft': '0 4px 20px -2px rgba(14, 165, 233, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',

@@ -43,41 +43,41 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Notification Bar */}
-      <div className="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div className="bg-slate-900 text-slate-300 text-xs sm:text-sm py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-2">
           
           {/* Working Hours & Location snippet */}
-          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-            <span className="flex items-center gap-1.5 text-slate-200 font-medium">
-              <Clock className="w-4 h-4 text-skybrand-400 shrink-0" />
+          <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-center sm:justify-start text-center sm:text-left">
+            <span className="flex items-center gap-1 text-slate-200 font-medium text-[11px] sm:text-xs md:text-sm">
+              <Clock className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
               <span>{clinicInfo.hours.display[lang]}</span>
             </span>
             <span className="hidden md:inline-block text-slate-700">•</span>
             <span className="hidden md:flex items-center gap-1.5 text-slate-200 font-medium">
-              <MapPin className="w-4 h-4 text-skybrand-400 shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
               <span>{clinicInfo.location.short[lang]}</span>
             </span>
           </div>
 
           {/* Phone Numbers & Language Toggle */}
-          <div className="flex items-center gap-3.5 flex-wrap justify-center">
+          <div className="flex items-center gap-2.5 sm:gap-3.5 flex-wrap justify-center">
             <a 
               href={clinicInfo.phones[0].tel} 
-              className="flex items-center gap-1.5 text-skybrand-300 hover:text-white font-semibold transition-colors"
+              className="flex items-center gap-1 text-skybrand-300 hover:text-white font-semibold transition-colors text-[11px] sm:text-xs md:text-sm"
             >
-              <Phone className="w-4 h-4 text-skybrand-400" />
+              <Phone className="w-3.5 h-3.5 text-skybrand-400 shrink-0" />
               <span>{clinicInfo.phones[0].display}</span>
             </a>
 
-            <SocialLinksBar iconSize="w-4 h-4" className="hidden lg:flex gap-2" />
+            <SocialLinksBar iconSize="w-3.5 h-3.5" className="hidden lg:flex gap-2" />
 
             {/* Prominent Language Switcher Button */}
             <button
               onClick={() => setLang(lang === 'am' ? 'en' : 'am')}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-semibold transition cursor-pointer"
+              className="inline-flex items-center gap-1 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-[11px] sm:text-xs md:text-sm font-semibold transition cursor-pointer"
               aria-label="Toggle website language"
             >
-              <Globe className="w-3.5 h-3.5 text-skybrand-400" />
+              <Globe className="w-3 h-3 text-skybrand-400 shrink-0" />
               <span>{lang === 'am' ? 'English' : 'አማርኛ'}</span>
             </button>
           </div>
@@ -89,25 +89,25 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
       <nav 
         className={`transition-all duration-300 ${
           isScrolled 
-            ? 'glass-nav shadow-sm border-b border-slate-100 py-2.5' 
-            : 'bg-white/95 backdrop-blur-md py-3.5'
+            ? 'glass-nav shadow-sm border-b border-slate-100 py-2 sm:py-2.5' 
+            : 'bg-white/95 backdrop-blur-md py-2.5 sm:py-3.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2">
             
             {/* Authentic Oli Dental Clinic Brand Logo */}
-            <a href="#home" className="flex items-center gap-3 group focus:outline-none shrink-0">
+            <a href="#home" className="flex items-center gap-2 sm:gap-3 group focus:outline-none min-w-0 shrink">
               <img 
                 src="/images/logo.jpg" 
                 alt="Oli Dental Clinic Logo" 
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-sm border border-slate-100 bg-white"
+                className="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-sm border border-slate-100 bg-white shrink-0"
               />
-              <div className="flex flex-col">
-                <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-skybrand-600 transition-colors">
+              <div className="flex flex-col min-w-0">
+                <span className="font-heading font-extrabold text-base xs:text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-skybrand-600 transition-colors truncate">
                   Oli Dental <span className="text-skybrand-600">Clinic</span>
                 </span>
-                <span className="text-xs font-medium text-slate-500 font-sans">
+                <span className="text-[10px] xs:text-xs font-medium text-slate-500 truncate max-w-[130px] xs:max-w-[190px] sm:max-w-none">
                   {clinicInfo.tagline[lang]}
                 </span>
               </div>
@@ -127,34 +127,35 @@ export default function Navbar({ lang = 'am', setLang, onOpenBooking }) {
             </div>
 
             {/* Desktop CTA */}
-            <div className="hidden sm:flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-3 shrink-0">
               <button
                 onClick={() => onOpenBooking()}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading font-bold text-sm sm:text-base text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/20 transition-all duration-200 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-heading font-bold text-sm sm:text-base text-white bg-gradient-to-r from-skybrand-600 to-dental-500 hover:from-skybrand-700 hover:to-dental-600 shadow-md shadow-skybrand-500/20 transition-all duration-200 active:scale-95"
               >
-                <Calendar className="w-4 h-4 text-white" />
+                <Calendar className="w-4 h-4 text-white shrink-0" />
                 <span>{lang === 'am' ? 'ቀጠሮ ያስይዙ' : 'Book Appointment'}</span>
               </button>
             </div>
 
             {/* Mobile Navigation Trigger */}
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-1.5 xs:gap-2 lg:hidden shrink-0">
               <button
                 onClick={() => setLang(lang === 'am' ? 'en' : 'am')}
-                className="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 text-slate-800 border border-slate-200"
+                className="px-2 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200"
+                aria-label="Toggle language"
               >
                 {lang === 'am' ? 'EN' : 'አማ'}
               </button>
 
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none transition-colors"
+                className="p-1.5 xs:p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none transition-colors"
                 aria-label="Toggle navigation menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-slate-800" />
+                  <X className="w-5 h-5 xs:w-6 xs:h-6 text-slate-800" />
                 ) : (
-                  <Menu className="w-6 h-6 text-slate-800" />
+                  <Menu className="w-5 h-5 xs:w-6 xs:h-6 text-slate-800" />
                 )}
               </button>
             </div>
