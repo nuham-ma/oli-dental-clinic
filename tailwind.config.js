@@ -50,8 +50,8 @@ export default {
       fontFamily: {
         heading: ['Outfit', 'Inter', 'Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Outfit', 'Inter', 'Menbere', '"Noto Serif Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
-        sans: ['Inter', 'Outfit', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['Inter', 'Outfit', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['Outfit', 'Inter', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
         amharic: ['Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', 'sans-serif'],
       },
       boxShadow: {

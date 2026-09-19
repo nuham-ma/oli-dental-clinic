@@ -7,7 +7,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', 'Outfit', 'Menbere', 'Noto Sans Ethiopic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Outfit', 'Inter', 'Menbere', 'Noto Sans Ethiopic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -16,16 +16,17 @@
   }
 
   body {
-    font-family: 'Inter', 'Outfit', 'Menbere', 'Noto Sans Ethiopic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Outfit', 'Inter', 'Menbere', 'Noto Sans Ethiopic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     @apply text-slate-800 text-base leading-relaxed antialiased font-sans;
     font-size: 15.5px;
+    letter-spacing: -0.01em;
     overflow-x: hidden;
     width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: 'Outfit', 'Inter', 'Menbere', '"Noto Serif Ethiopic"', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
   /* Specific Amharic language typography rules for distinctive, modern aesthetic */
