@@ -48,11 +48,10 @@ export default {
         '2xl': '1536px',
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'Poppins', 'Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Poppins', 'Menbere', '"Noto Serif Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', '-apple-system', 'sans-serif'],
-        poppins: ['Poppins', 'Menbere', '"Noto Sans Ethiopic"', 'Nyala', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['Outfit', 'Inter', 'Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Outfit', 'Inter', 'Menbere', '"Noto Serif Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Inter', 'Outfit', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['Inter', 'Outfit', 'Menbere', '"Noto Sans Ethiopic"', 'system-ui', '-apple-system', 'sans-serif'],
         amharic: ['Menbere', '"Noto Serif Ethiopic"', '"Noto Sans Ethiopic"', 'Nyala', 'Kefa', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
